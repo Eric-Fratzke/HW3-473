@@ -1,5 +1,5 @@
 (function(window) {
-  "use strict";
+  'use strict';
   var App = window.App || {};
 
   function Truck(truckId, db) {

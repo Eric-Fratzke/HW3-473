@@ -1,21 +1,21 @@
 (function(window) {
-  "use strict";
+  'use strict';
   var App = window.APP || {};
   var $ = window.jQuery;
 
   function FormHandler(selector) {
     if (!selector) {
-      throw new Error("No selector provided");
+      throw new Error('No selector provided');
     }
     this.$formElement = $(selector);
 
     if (this.$formElement.length === 0) {
-      throw new Error("Could not find element with selector: " + selector);
+      throw new Error('Could not find element with selector: ' + selector);
     }
   }
 
   FormHandler.prototype.addSubmitHandler = function(fn) {
-    console.log("Setting submit handler for form");
+    console.log('Setting submit handler for form');
     this.$formElement.on('submit', function(event) {
 
       event.preventDefault();
@@ -49,7 +49,7 @@
 
   $('#payform').on('click', function(event) {
     event.preventDefault();
-    location.assign("payment-form.html");
+    location.assign('payment-form.html');
     this.reset();
     this.elements[0].focus();
   });
